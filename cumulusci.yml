@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.68.0.dev2'
+project:
+    name: Retesting-W-12406594--syncing-contributors-issue-delete
+    package:
+        name: Retesting-W-12406594--syncing-contributors-issue-delete
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Retesting-W-12406594--syncing-contributors-issue-delete/tests
+            options:
+                outputdir: robot/Retesting-W-12406594--syncing-contributors-issue-delete/results
+
+    robot_testdoc:
+        options:
+            path: robot/Retesting-W-12406594--syncing-contributors-issue-delete/tests
+            output: robot/Retesting-W-12406594--syncing-contributors-issue-delete/doc/Retesting-W-12406594--syncing-contributors-issue-delete_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
